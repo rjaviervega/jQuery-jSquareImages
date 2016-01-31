@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jSquareImages Plugin Demo</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="../plugin/jsquareimages.js"></script>
+    
+        <style>
+            .image-style {
+                border-color: silver;
+                border-width: 1px;
+                border-style: solid;
+                margin: 0px 15px 25px 0;
+                max-width: 120px;
+                float: left;
+            }
+            .clear {
+                clear: both;
+            }
+        </style>
+    
+        <script>
+            $(document).ready(function(){
+               $(".jsquareimage").squareimages({size: 128, centerx:'center', centery: 'bottom'}); 
+            });
+        </script>    
+               
+    </head>
+    
+    <body>
+        
+        <h1>jSquareImages Plugin Demo</h1>
+        
+        <hr>
+        
+        <p>This demo shows the use of jSquareImages plugin to display a 4:3 image squared.</p>
+        
+        <p>Normal ratio of an image 640x480 looks like this (resized to 128px):</p>        
+        <img src="1.jpg" class="image-style">
+
+        <br />
+        
+        <p class="clear">jSquareImages size 32px and centered (left, center, right):</p>
+        <img class="jsquareimage image-style" data-size="32" data-centerx="left"    src="1.jpg">
+        <img class="jsquareimage image-style" data-size="32" data-centerx="center"  src="1.jpg">
+        <img class="jsquareimage image-style" data-size="32" data-centerx="right"   src="1.jpg">
+
+        <p class="clear">jSquareImages size 64px, centered:</p>
+        <img class="jsquareimage image-style" data-size="64" src="1.jpg">
+
+        <p class="clear">jSquareImages size 128px, centered:</p>
+        <img  class="jsquareimage image-style" data-size="128" src="1.jpg">
+        
+    </body>
+    
+</html>
